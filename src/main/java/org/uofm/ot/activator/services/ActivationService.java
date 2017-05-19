@@ -4,8 +4,9 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.uofm.ot.activator.adapter.PythonAdapter;
+import org.uofm.ot.activator.adapter.PayloadAdapter;
 import org.uofm.ot.activator.domain.KnowledgeObject;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 import org.uofm.ot.activator.repository.Shelf;
@@ -27,7 +28,8 @@ public class ActivationService {
   @Autowired
   private IoSpecGenerator convertor;
   @Autowired
-  private PythonAdapter adapter;
+  @Qualifier("noop")
+  private PayloadAdapter adapter;
 
 
   public Result getResultByArkId(Map<String, Object> inputs, ArkId arkId) {
@@ -94,8 +96,9 @@ public class ActivationService {
     if (isInputAndPayloadValid(inputs, ko.payload, ioSpec)) {
       Payload payload = ko.payload;
 
-      log.info("Object payload is sent to Python Adaptor for execution.");
-      result = adapter.execute( inputs, payload, ioSpec.getReturntype() );
+      log.info("Object payload is sent to Payload Adaptor for execution.");
+      Class clazz = ioSpec.getReturntype();
+      Object payloadResult = adapter.execute(inputs, payload, clazz);
     }
 
     return result;

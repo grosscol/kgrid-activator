@@ -21,5 +21,5 @@ import java.util.Map;
      * @param payload Payload from a knowledge object.  The contents of which should be actionable by the adapter.
      * @return Java object of a type specified by the Type T.  It needs to be parsable * by {@link ObjectMapper}.
      */
-    public <T> T execute(Map<String, Object> params, Payload payload) throws OTExecutionStackException;
+    public <T> T execute(Map<String, Object> params, Payload payload, Class<T> c) throws OTExecutionStackException;
  }
