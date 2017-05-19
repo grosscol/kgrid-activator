@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>edu.umich.lhs</groupId>
-	<artifactId>python-execution-stack</artifactId>
+	<artifactId>activator</artifactId>
 	<version>0.5.6-SNAPSHOT</version>
 	<packaging>${packaging}</packaging>
 
-	<name>python-execution-stack</name>
-	<description>KGrid: Python Execution Stack</description>
+	<name>activator</name>
+	<description>KGrid: Activator</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -18,7 +18,7 @@
 	</parent>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:kgrid/python-execution-stack.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:grosscol/kgrid-activator.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -61,11 +61,6 @@
 					<groupId>org.apache.httpcomponents</groupId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.python</groupId>
-			<artifactId>jython-standalone</artifactId>
-			<version>2.7.1b3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -161,12 +156,6 @@
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
                             <executable>true</executable>
-                            <requiresUnpack>
-                                <dependency>
-                                    <groupId>org.python</groupId>
-                                    <artifactId>jython-standalone</artifactId>
-                                </dependency>
-                            </requiresUnpack>
                         </configuration>
                     </plugin>
                 </plugins>

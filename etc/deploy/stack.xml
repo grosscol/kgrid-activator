@@ -1,7 +1,7 @@
 <!--
     Configure location of application.properties for spring app deployed at /stack.
 
-    You can also add 'docBase="/var/kgrid/python-activator-1.0.23.war' to the <Context>
+    You can also add 'docBase="/var/kgrid/activator-1.0.23.war' to the <Context>
     element if you are externalizing the war file deployment as well. If docBase is a
     symbolic link a restart is required to redeploy. Otherwise, changes to the .war file
     or this context.xml will reload the app.
