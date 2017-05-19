@@ -29,8 +29,24 @@ public class ioSpec {
 		return params;
 	}
 
-	public DataType getReturntype() {
-		return returntype;
+	public Class getReturntype() {
+		Class retType;
+		switch(returntype){
+			case FLOAT: retType = Float.class;
+                break;
+			case INT: retType = Integer.class;
+                break;
+			case STRING: retType = String.class;
+                break;
+			case LONG: retType = Long.class;
+				break;
+			case MAP: retType = Map.class;
+                break;
+			default: retType = Object.class;
+                break;
+        }
+
+		return retType;
 	}
 
 	public void setReturntype(DataType returntype) {
