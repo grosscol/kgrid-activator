@@ -1,5 +1,7 @@
 package org.uofm.ot.activator.domain;
 
+import org.uofm.ot.knowledge.Metadata;
+
 public class Result {
 
 	private Object result;

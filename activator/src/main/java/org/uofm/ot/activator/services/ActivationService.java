@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.uofm.ot.activator.adapter.PayloadAdapter;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 import org.uofm.ot.activator.repository.Shelf;
-import org.uofm.ot.activator.domain.ArkId;
-import org.uofm.ot.activator.domain.EngineType;
-import org.uofm.ot.activator.domain.KnowledgeObject.Payload;
+import org.uofm.ot.knowledge.ArkId;
+import org.uofm.ot.knowledge.EngineType;
+import org.uofm.ot.knowledge.KnowledgeObject.Payload;
 import org.uofm.ot.activator.domain.Result;
 
 /**

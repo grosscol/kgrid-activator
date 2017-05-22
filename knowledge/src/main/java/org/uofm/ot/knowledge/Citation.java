@@ -1,4 +1,4 @@
-package org.uofm.ot.activator.domain;
+package org.uofm.ot.knowledge;
 
 /**
  * Created by nggittle on 3/24/2017.

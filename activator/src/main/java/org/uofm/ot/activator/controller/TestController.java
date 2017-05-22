@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.KnowledgeObject;
 
 import java.io.IOException;
 import java.util.HashMap;

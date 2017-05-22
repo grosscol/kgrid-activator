@@ -20,9 +20,9 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Service;
-import org.uofm.ot.activator.domain.ArkId;
-import org.uofm.ot.activator.domain.KnowledgeObject;
-import org.uofm.ot.activator.domain.Metadata;
+import org.uofm.ot.knowledge.ArkId;
+import org.uofm.ot.knowledge.KnowledgeObject;
+import org.uofm.ot.knowledge.Metadata;
 import org.uofm.ot.activator.exception.OTExecutionStackEntityNotFoundException;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 

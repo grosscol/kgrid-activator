@@ -1,7 +1,7 @@
 package org.uofm.ot.activator.adapter;
 
 import org.springframework.stereotype.Component;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 
 import java.util.HashMap;

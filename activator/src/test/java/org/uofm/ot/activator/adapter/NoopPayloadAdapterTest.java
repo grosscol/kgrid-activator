@@ -9,8 +9,7 @@ import java.util.Map;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.uofm.ot.activator.domain.KnowledgeObject;
-import org.uofm.ot.activator.exception.OTExecutionStackException;
+import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.domain.KnowledgeObjectBuilder;
 
 /**

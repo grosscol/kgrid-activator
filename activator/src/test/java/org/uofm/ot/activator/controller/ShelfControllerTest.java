@@ -24,7 +24,6 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -32,8 +31,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.uofm.ot.activator.ObjectTellerExecutionStackApplication;
 import org.uofm.ot.activator.TestUtils;
-import org.uofm.ot.activator.domain.ArkId;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.ArkId;
+import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.domain.KnowledgeObjectBuilder;
 import org.uofm.ot.activator.repository.Shelf;
 

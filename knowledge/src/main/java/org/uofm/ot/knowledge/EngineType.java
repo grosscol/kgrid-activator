@@ -1,4 +1,4 @@
-package org.uofm.ot.activator.domain;
+package org.uofm.ot.knowledge;
 
 public enum EngineType {
 	

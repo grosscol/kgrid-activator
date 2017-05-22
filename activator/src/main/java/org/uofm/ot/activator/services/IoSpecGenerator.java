@@ -12,8 +12,8 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.springframework.stereotype.Service;
-import org.uofm.ot.activator.domain.DataType;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.DataType;
+import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.domain.ParamDescription;
 
 @Service

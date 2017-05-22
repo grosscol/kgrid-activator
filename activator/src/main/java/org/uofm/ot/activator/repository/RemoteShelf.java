@@ -4,7 +4,6 @@ package org.uofm.ot.activator.repository;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.client.LaxRedirectStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,8 +16,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.uofm.ot.activator.exception.OTExecutionBadGateway;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
-import org.uofm.ot.activator.domain.ArkId;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.ArkId;
+import org.uofm.ot.knowledge.KnowledgeObject;
 
 
 @Service

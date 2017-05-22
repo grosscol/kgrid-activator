@@ -1,7 +1,7 @@
 package org.uofm.ot.activator.adapter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.uofm.ot.activator.domain.KnowledgeObject.Payload;
+import org.uofm.ot.knowledge.KnowledgeObject.Payload;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 
 import java.util.Map;

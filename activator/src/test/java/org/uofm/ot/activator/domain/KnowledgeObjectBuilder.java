@@ -1,6 +1,8 @@
 package org.uofm.ot.activator.domain;
 
-import org.uofm.ot.activator.domain.KnowledgeObject.Payload;
+import org.uofm.ot.knowledge.KnowledgeObject;
+import org.uofm.ot.knowledge.KnowledgeObject.Payload;
+import org.uofm.ot.knowledge.Metadata;
 
 /**
  * Created by nggittle on 3/27/2017.

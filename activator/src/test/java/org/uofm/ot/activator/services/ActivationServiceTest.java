@@ -14,7 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.uofm.ot.activator.ObjectTellerExecutionStackApplication;
 import org.uofm.ot.activator.TestUtils;
-import org.uofm.ot.activator.domain.KnowledgeObject;
+import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 import org.uofm.ot.activator.domain.KnowledgeObjectBuilder;
 import org.uofm.ot.activator.domain.Result;

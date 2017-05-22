@@ -1,4 +1,4 @@
-package org.uofm.ot.activator.domain;
+package org.uofm.ot.knowledge;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
