@@ -2,7 +2,7 @@ package org.uofm.ot.pad;
 
 import org.springframework.stereotype.Component;
 import org.uofm.ot.knowledge.KnowledgeObject;
-import org.uofm.ot.pad.exceptions.ExecException;
+import org.uofm.ot.pad.exceptions.PayloadExecException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class NoopPayloadAdapter implements PayloadAdapter {
      */
     @Override
     public <T> T execute(Map<String, Object> params, KnowledgeObject.Payload payload, Class<T> clazz)
-            throws ExecException {
+            throws PayloadExecException {
 
         Object retVal;
 
@@ -57,14 +57,14 @@ public class NoopPayloadAdapter implements PayloadAdapter {
             retObject = clazz.newInstance();
             return retObject;
         }catch (IllegalAccessException illEx){
-            ExecException otEx;
+            PayloadExecException otEx;
             String msg = "Could not instantiate return object for: " + clazz.toString();
-            otEx = new ExecException(msg, illEx);
+            otEx = new PayloadExecException(msg, illEx);
             throw(otEx);
         } catch (InstantiationException instEx) {
-            ExecException otEx;
+            PayloadExecException otEx;
             String msg = "Could not instantiate return object for: " + clazz.toString();
-            otEx = new ExecException(msg, instEx);
+            otEx = new PayloadExecException(msg, instEx);
             throw(otEx);
         }
     }

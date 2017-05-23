@@ -18,6 +18,7 @@ import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 import org.uofm.ot.activator.domain.KnowledgeObjectBuilder;
 import org.uofm.ot.activator.domain.Result;
+import org.uofm.ot.pad.exceptions.PayloadExecException;
 
 /**
  * Created by nggittle on 3/22/2017.
@@ -93,7 +94,7 @@ public class ActivationServiceTest {
     Result expectedResult = new Result(null);
     expectedResult.setSource(null);
 
-    expectedEx.expect(OTExecutionStackException.class);
+    expectedEx.expect(PayloadExecException.class);
     expectedEx.expectMessage(startsWith("Error while executing payload code"));
     Result generatedResult = activationService.validateAndExecute(inputs, ko);
   }
@@ -190,7 +191,7 @@ public class ActivationServiceTest {
     Result expectedResult = new Result(null);
     expectedResult.setResult("{u'rxcui': u'1723222'}");
 
-    expectedEx.expect(OTExecutionStackException.class);
+    expectedEx.expect(PayloadExecException.class);
     expectedEx.expectMessage(startsWith("Type mismatch while converting python result to java. Check input spec and code payload java.lang.ClassCastException:"));
 
     Result generatedResult = activationService.validateAndExecute(inputs, ko);
@@ -210,7 +211,7 @@ public class ActivationServiceTest {
     Result expectedResult = new Result(null);
     expectedResult.setResult("{u'rxcui': u'1723222'}");
 
-    expectedEx.expect(OTExecutionStackException.class);
+    expectedEx.expect(PayloadExecException.class);
     expectedEx.expectMessage(startsWith("Type mismatch while converting python result to java. Check input spec and code payload java.lang.ClassCastException:"));
 
     Result generatedResult = activationService.validateAndExecute(inputs, ko);

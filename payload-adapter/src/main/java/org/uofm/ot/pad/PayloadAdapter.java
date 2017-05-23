@@ -1,7 +1,7 @@
 package org.uofm.ot.pad;
 
 import org.uofm.ot.knowledge.KnowledgeObject.Payload;
-import org.uofm.ot.pad.exceptions.ExecException;
+import org.uofm.ot.pad.exceptions.PayloadExecException;
 
 import java.util.Map;
 
@@ -20,5 +20,5 @@ import java.util.Map;
      * @param payload Payload from a knowledge object.  The contents of which should be actionable by the adapter.
      * @return Java object of a type specified by the Type T.
      */
-    public <T> T execute(Map<String, Object> params, Payload payload, Class<T> c) throws ExecException;
+    public <T> T execute(Map<String, Object> params, Payload payload, Class<T> clazz) throws PayloadExecException;
  }
