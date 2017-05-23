@@ -28,7 +28,7 @@ public class ActivationService {
   @Autowired
   private IoSpecGenerator convertor;
   @Autowired
-  @Qualifier("noop")
+  @Qualifier("jython")
   private PayloadAdapter adapter;
 
 
@@ -99,6 +99,15 @@ public class ActivationService {
       log.info("Object payload is sent to Payload Adaptor for execution.");
       Class clazz = ioSpec.getReturntype();
       Object payloadResult = adapter.execute(inputs, payload, clazz);
+
+      // TODO: refactor to Result builder method that does the right thing, and returns a sane Result.
+      result = new Result();
+      if( clazz == Map.class){
+        Map<String, Object> realMap = (Map<String, Object>) payloadResult;
+        result.setResult(realMap.get("result"));
+      }else{
+        result.setResult(String.valueOf(payloadResult));
+      }
     }
 
     return result;
