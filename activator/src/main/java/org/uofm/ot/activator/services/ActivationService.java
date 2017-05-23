@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.uofm.ot.activator.adapter.PayloadAdapter;
+import org.uofm.ot.pad.PayloadAdapter;
 import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.exception.OTExecutionStackException;
 import org.uofm.ot.activator.repository.Shelf;

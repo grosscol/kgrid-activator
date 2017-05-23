@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.uofm.ot.knowledge.KnowledgeObject;
 import org.uofm.ot.activator.domain.KnowledgeObjectBuilder;
+import org.uofm.ot.pad.NoopPayloadAdapter;
+import org.uofm.ot.pad.PayloadAdapter;
 
 /**
  *

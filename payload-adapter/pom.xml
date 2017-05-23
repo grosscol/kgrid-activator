@@ -11,5 +11,13 @@
 
     <artifactId>payload-adapter</artifactId>
 
+    <dependencies>
+        <dependency>
+            <artifactId>knowledge</artifactId>
+            <version>0.6.0-SNAPSHOT</version>
+            <groupId>edu.umich.lhs</groupId>
+        </dependency>
+    </dependencies>
+
 
 </project>

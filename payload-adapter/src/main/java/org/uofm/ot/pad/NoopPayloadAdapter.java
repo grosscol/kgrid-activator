@@ -1,8 +1,8 @@
-package org.uofm.ot.activator.adapter;
+package org.uofm.ot.pad;
 
 import org.springframework.stereotype.Component;
 import org.uofm.ot.knowledge.KnowledgeObject;
-import org.uofm.ot.activator.exception.OTExecutionStackException;
+import org.uofm.ot.pad.exceptions.ExecException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class NoopPayloadAdapter implements PayloadAdapter {
      */
     @Override
     public <T> T execute(Map<String, Object> params, KnowledgeObject.Payload payload, Class<T> clazz)
-            throws OTExecutionStackException {
+            throws ExecException {
 
         Object retVal;
 
@@ -47,7 +47,7 @@ public class NoopPayloadAdapter implements PayloadAdapter {
 
     /**
      * Attempt to create an instances of Class<T>
-     * @param c Class to instantiate
+     * @param clazz Class to instantiate
      * @param <T> Type of
      * @return
      */
@@ -57,14 +57,14 @@ public class NoopPayloadAdapter implements PayloadAdapter {
             retObject = clazz.newInstance();
             return retObject;
         }catch (IllegalAccessException illEx){
-            OTExecutionStackException otEx;
+            ExecException otEx;
             String msg = "Could not instantiate return object for: " + clazz.toString();
-            otEx = new OTExecutionStackException(msg, illEx);
+            otEx = new ExecException(msg, illEx);
             throw(otEx);
         } catch (InstantiationException instEx) {
-            OTExecutionStackException otEx;
+            ExecException otEx;
             String msg = "Could not instantiate return object for: " + clazz.toString();
-            otEx = new OTExecutionStackException(msg, instEx);
+            otEx = new ExecException(msg, instEx);
             throw(otEx);
         }
     }
